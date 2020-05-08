@@ -1,0 +1,19 @@
+package nyatodev;
+
+import java.util.Random;
+
+public class Eyleyici implements IEyleyici {
+    
+   
+   SicaklikAlgilayici sAlgilayici = new SicaklikAlgilayici();
+    
+    public void sogutucuAc(){
+       
+        System.out.println("Soğutucu Açıldı...");
+    }
+    
+    public void sogutucuKapat(){
+        
+        System.out.println("Soğutucu Kapatıldı...");
+    }
+}

@@ -1,0 +1,23 @@
+package nyatodev;
+
+import java.util.Random;
+
+public class SicaklikAlgilayici {
+    
+    int sicaklik = 25;
+    
+    Random rnd = new Random();
+    
+    int Low = -35;
+    int High = 42;
+    int okunanSicaklik = rnd.nextInt(High-Low) + Low;
+    
+    public void SicaklikOku(int result){
+        okunanSicaklik = sicaklik;
+    }
+    
+    public void SicaklikGonder(){
+        SicaklikOku(okunanSicaklik);
+        System.out.println(okunanSicaklik);
+    }    
+}

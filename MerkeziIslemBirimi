@@ -1,0 +1,9 @@
+package nyatodev;
+
+public class MerkeziIslemBirimi {
+    SicaklikAlgilayici salg = new SicaklikAlgilayici();
+    
+    public void SicaklikGoruntuleme(){
+        System.out.println("Sicaklik : " + salg.okunanSicaklik + "°C");
+    }
+}

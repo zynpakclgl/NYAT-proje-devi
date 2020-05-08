@@ -1,0 +1,61 @@
+package nyatodev;
+
+import java.util.Scanner;
+
+public class AgArayuzu {
+    MerkeziIslemBirimi mib = new MerkeziIslemBirimi();
+    Kullanici kul = new Kullanici();
+    SicaklikAlgilayici sa = new SicaklikAlgilayici();
+    Eyleyici ey = new Eyleyici();
+    
+    public void kullaniciDogrulama(){
+        Scanner in = new Scanner(System.in);
+        System.out.print("Kullanici adi......: ");
+        kul.kullanici = in. nextLine();
+        System.out.print("sifre.....: ");
+        kul.parola = in. nextLine();        
+       
+        System.out.println("dogrulama basarili..");             
+    }
+    
+    void Secim(){       
+        
+        int secim;        
+               
+        do{
+            System.out.println("##############MENU##############");
+            System.out.println("1.Sıcaklık Goruntule");
+            System.out.println("2.Sogutucu Ac");
+            System.out.println("3.Sogutucu Kapat");
+            System.out.println("4.Sistemi Kapat");
+            Scanner in=new Scanner(System.in);
+            secim = in. nextInt();       
+                    
+            switch(secim){
+            case 1:
+                mib.SicaklikGoruntuleme();        
+            break;            
+            case 2:
+                ey.sogutucuAc();             
+            break;
+            case 3:
+                ey.sogutucuKapat();
+            break;  
+            case 4:
+                System.exit(0);
+            default: 
+            System.out.println("gecersiz secim!");
+            break;        
+            }
+            
+            System.out.println("Yeni bir işlem yapmak ister misiniz? (E/H) ");
+            secim = in. next().charAt(0);
+            
+            if(secim=='H'||secim=='h'){
+                break;
+            }
+        }while(secim=='E'||secim=='e');
+            
+                
+    }
+}

@@ -1,0 +1,14 @@
+package nyatodev;
+
+public class Cihaz {
+    
+    
+    public static void main(String[] args) {
+        Kullanici kullanici = new Kullanici();
+        kullanici.dbConnection();
+        AgArayuzu ara = new AgArayuzu();
+        ara.kullaniciDogrulama();
+        ara.Secim();
+    }           
+    
+}
